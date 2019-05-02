@@ -25,11 +25,16 @@ class Triangle extends Polygon{
 
 class Square extends Polygon{
     get isValid(){
-        if (this.lengths.forEach((l) => {l === this.lengths[0]})){
+        
+        if (this.lengths.every((l) => {return l === this.lengths[0]})){
             return true
         }
         else {
             return false
         }
+    }
+
+    get area(){
+        return Math.pow(this.lengths[0], 2)
     }
 }
